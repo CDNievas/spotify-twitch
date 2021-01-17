@@ -1,12 +1,14 @@
 const GLOBALS = require("./globals")
 
-const startWS = require("./ws");
-
 const express = require('express')
 const router = require("./routers/spotify");
 const bodyParser = require("body-parser");
 
-const io = require("./ws");
+// Socket IO Client
+const io = require("./io");
+
+// Socket IO Server
+const spotifyScene = require("./SpotifyScene");
 
 // WebServer
 const app = express();
