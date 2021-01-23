@@ -1,7 +1,9 @@
 const spotifyClient = require("./SpotifyClient");
 const io = require('socket.io')();
 
-io.listen(3000);
+const GLOBALS = require("./globals")
+
+io.listen(GLOBALS.PORT_IO);
 
 socketSpotifyScene = null;
 
